@@ -28,39 +28,6 @@ Lastly we also compute distal (also called trash) adversarial examples which are
 
 
 
-
-## Loading the ABS Model
-The model can be loaded and supports the standard pytorch API
- 
-```
-from abs_models import models as mz        # model zoo
-from abs_models import utils as u
-
-model = mz.get_VAE(n_iter=50)              # ABS do n_iter=1 for speedup (but ess accurate)
-batch, label = u.get_batch()               # returns torch.tensor, shape (batch_size, n_channels, nx, ny)
-logits = model(u.n2t(batch))
-```
-For a complete example using foolbox see "_scripts/attacks.ipynb_" or "_scripts/attacks.py_".
-
-With the power of foolbox one can also run a code agnostic version of the model
-
-## Installation
-Our code used pytorch and python3.6 and can be found here (this repo):
-```
-git clone https://github.com/emmanueltsukerman/AnalysisBySynthesis.git
-```
-
-The dependencies are:
-```
-pip3 --no-cache-dir install \
-        numpy \
-        http://download.pytorch.org/whl/cu90/torch-0.4.0-cp36-cp36m-linux_x86_64.whl \
-        torchvision \
-        foolbox \
-```
-
-Have fun :).
- 
  
 [1] Lukas Schott, Jonas Rauber, Matthias Bethge, and Wieland Brendel. Towards the first adversarially robust neural network model on mnist. International Conference for Learning Representations 2019, 2019. URL https://arxiv.org/abs/1805.09190
 
