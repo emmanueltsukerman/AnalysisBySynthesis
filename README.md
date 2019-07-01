@@ -47,7 +47,7 @@ With the power of foolbox one can also run a code agnostic version of the model
 ## Installation
 Our code used pytorch and python3.6 and can be found here (this repo):
 ```
-git clone https://github.com/lukas-schott/AnalysisBySynthesis.git
+git clone https://github.com/emmanueltsukerman/AnalysisBySynthesis.git
 ```
 
 The dependencies are:
